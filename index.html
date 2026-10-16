@@ -206,11 +206,37 @@
     }
 
     .hero-content {
-      max-width: 800px;
+      max-width: 1200px;
       margin: 0 auto;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+      gap: 4rem;
+      text-align: left;
+    }
+
+    .hero-text-side {
+      flex: 1;
       display: flex;
       flex-direction: column;
       align-items: center;
+      text-align: center;
+    }
+
+    .hero-image-side {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .hero-image-side img {
+      width: 100%;
+      max-width: 500px;
+      height: auto;
+      border-radius: 12px;
+      box-shadow: 0 8px 25px rgba(15, 56, 54, 0.12);
     }
 
     .hero h1 {
@@ -229,8 +255,9 @@
     .hero p {
       color: var(--text-muted);
       font-size: 1.05rem;
-      max-width: 650px;
-      margin: 0 auto 2rem;
+      max-width: 100%;
+      margin: 0 0 1.5rem 0;
+      text-align: left;
     }
 
     .badge {
@@ -334,10 +361,10 @@
       border: none;
     }
 
-    /* Certificates Grid Layout (Top 2 side by side, 3rd centered below) */
+    /* Certificates Grid Layout */
     .cert-grid-custom {
       display: grid;
-      grid-template-columns: repeat(2, 1fr);
+      grid-template-columns: repeat(3, 1fr);
       gap: 2rem;
       width: 100%;
       max-width: 1200px;
@@ -350,9 +377,11 @@
     }
 
     .cert-grid-custom .cert-item-wrapper.full-width {
-      grid-column: 1 / -1;
+      grid-column: auto;
       max-width: 600px;
       margin: 0 auto;
+      justify-items: center; 
+      align-items: center;
     }
 
     /* Simple Metallic Gold Border Frame Container */
@@ -612,25 +641,35 @@
   <div id="page-home" class="page-view active">
     <section class="hero">
       <div class="hero-content">
-        <span class="badge">Seneca Polytechnic</span>
+        
+        <!-- Left Side: Welcome Text (Center-Aligned Header Elements) -->
+        <div class="hero-text-side">
+          <span class="badge">Seneca Polytechnic</span>
 
-        <h1>Sophia Clack</h1>
-        <p class="subtitle">Executive Administration Professional</p>
-        <p>At my core, I enjoy creating order, improving processes, and helping things run smoothly. I care about accuracy, I care about people, and I care about doing things the right way. These values form the foundation of my professional identity and guide how I approach every project and role.</p>
+          <h1>Welcome to my Portfolio</h1>
+          <p class="subtitle">Where organized structure meets thoughtful support</p>
+          <p>At my core, I enjoy creating order, improving processes, and helping things run smoothly. I care about accuracy, I care about people, and I care about doing things the right way. These values form the foundation of my professional identity and guide how I approach every project and role.</p>
 
-<p style="margin-top: 1px;">My strengths lie in logical thinking, steady leadership, and strong teamwork, which help keep groups organized, remove obstacles, and ensure everyone stays aligned toward a shared goal. 
-<p style="margin-top: 1px;">Whether I’m leading a complex task or supporting others, I work with intention, care, and a focus on helping both people and processes succeed.</p>
+          <p style="margin-top: 1px;">My strengths lie in logical thinking, steady leadership, and strong teamwork, which help keep groups organized, remove obstacles, and ensure everyone stays aligned toward a shared goal.</p>
+          <p style="margin-top: 1px;">Whether I’m leading a complex task or supporting others, I work with intention, care, and a focus on helping both people and processes succeed.</p>
+        </div>
+
+        <!-- Right Side: Inserted Image File -->
+        <div class="hero-image-side">
+          <img src="https://1drv.ms/i/c/d018a6249b4c1438/IQSEwxJGq-EdQYoLgGcfQn_FAfS_9GhBSaaQyzlCE2NVqBg" alt="Portfolio Image">
+        </div>
+
       </div>
     </section>
 
     <section id="about">
       <h2 class="section-title">Professional Background</h2>
-      <p class="section-subtitle">Bridging organizational efficiency with strategic support</p>
+      <p class="section-subtitle">Bringing reason, structure, and care to every project</p>
       
       <div class="about-grid">
         <div>
           <p>Over the years, I’ve built a career shaped by curiosity, precision, and a genuine commitment to helping people. I’m someone who thrives in organized, detail‑driven environments where clarity, accuracy, and thoughtful communication make a real difference. This includes reviewing complex documents, coordinating projects, and guiding clients through creative design processes.</p>
-          <p style="margin-top: 1rem;">My work in AI training has strengthened my ability to analyze information deeply, maintain consistency, and uphold high quality standards. I enjoy the challenge of transforming messy or ambiguous content into something structured, reliable, and ready for use. It is work that rewards patience, focus, and a steady hand. These are qualities I have always valued.</p>
+          <p style="margin-top: 1rem;">My work in AI training has strengthened my ability to analyze information deeply, maintain consistency, and uphold high quality standards. I enjoy the challenge of transforming messy or ambiguous content into something structured, reliable, and ready for use. It is work that rewards patience, focus, and sound judgement. These are qualities I have always valued.</p>
 	<p style="margin-top: 1rem;">My long-standing role as a CAD Jewellery Designer taught me how to listen closely, communicate clearly, and manage multiple priorities without losing sight of the details. Maintaining thousands of confidential client records and custom design projects gave me a strong appreciation for organized systems and the trust people place in them.</p>
 	<p style="margin-top: 1rem;">As I conclude my Office Administration – Executive studies at Seneca Polytechnic, I am bringing all of these experiences together. I’m drawn to roles where organization, quality assurance, and client service intersect, and I’m especially interested in education and public‑sector environments where the work supports people and communities. At the same time, I remain open‑minded to exploring other opportunities that allow me to grow, contribute, and apply my skills in meaningful ways.</p>
         </div>
@@ -729,7 +768,22 @@
       
       <div class="projects-grid">
         
-        <!-- Project 1: Case Study: Simulated Sales Presentation -->
+
+        <!-- Project 1: Professional Portfolio -->
+        <div class="embed-card">
+          <div class="card-header">
+            <h3>Custom Professional Portfolio</h3>
+            <span class="subheading-tech">Web Design & AI Collaboration</span>
+          </div>
+          <div class="project-description" style="margin-top: 0; margin-bottom: 1rem;">
+            For my portfolio, I designed and built the webpage by leveraging AI tools, specifically Gemini, to bring my creative direction to life. Using a prompting approach often called "Vibe Coding", I guided Gemini with the aesthetic, tone, and structure I envisioned. From there, I refined the code myself with the support of AI, shaping the layout, colours, typography, and embedded files into a clean, personalized space that reflects my work and identity.
+          </div>
+          <p class="project-description" style="margin-top: 0;">
+            This project showcases my ability to collaborate with AI tools, solve and troubleshoot technical challenges, translate ideas into functional design, and fine‑tune technical outputs into a polished final product.
+          </p>
+        </div>
+
+        <!-- Project 2: Case Study: Simulated Sales Presentation -->
         <div class="embed-card">
           <div class="card-header">
             <h3>Case Study: Simulated Sales Presentation</h3>
@@ -745,7 +799,7 @@
           </p>
         </div>
 
-        <!-- Project 2: Case Study: Business Analysis & Recommendation -->
+        <!-- Project 3: Case Study: Business Analysis & Recommendation -->
         <div class="embed-card">
           <div class="card-header">
             <h3>Case Study: Business Analysis & Recommendation</h3>
@@ -771,13 +825,14 @@
 
   <!-- PAGE 4: CERTIFICATIONS PAGE -->
   <div id="page-certifications" class="page-view">
+    <!-- Section 1: Certifications -->
     <section>
       <h2 class="section-title">Certifications</h2>
-      <p class="section-subtitle">Professional credentials and verified achievements</p>
+      <p class="section-subtitle">Professional credentials & certificates</p>
       
       <div class="cert-grid-custom">
         <!-- Certificate 1: Typist Certificate -->
-        <div class="cert-item-wrapper">
+        <div class="cert-item-wrapper full-width">
           <div class="cert-landscape-container" onclick="openCertModal('iframe', 'https://1drv.ms/b/c/d018a6249b4c1438/IQRC57PPZDoDQb-vLYgLpPwxAWpfrzACWeoHw9LeRVlxb7o#toolbar=0&navpanes=0&scrollbar=0&view=FitH')">
             <div class="cert-landscape-frame">
               <iframe src="https://1drv.ms/b/c/d018a6249b4c1438/IQRC57PPZDoDQb-vLYgLpPwxAWpfrzACWeoHw9LeRVlxb7o#toolbar=0&navpanes=0&scrollbar=0&view=FitH" frameborder="0" scrolling="no" style="overflow: hidden; pointer-events: none;"></iframe>
@@ -802,6 +857,30 @@
             </div>
           </div>
         </div>
+      </div>
+    </section>
+
+    <!-- Section 2: Achievements -->
+    <section style="padding-top: 0;">
+      <h2 class="section-title">Achievements</h2>
+      <p class="section-subtitle">Academic achievements & Awards</p>
+      
+      <div class="cert-grid-custom">
+        <!-- Award 1: President List Winter -->
+        <div class="cert-item-wrapper">
+          <div class="cert-landscape-container" onclick="openCertModal('iframe', 'https://1drv.ms/b/c/d018a6249b4c1438/IQRPrrhbdBI1R4Us2uu16sSiAVEBWXbpNyIMAiWHTIv0hfM#toolbar=0&navpanes=0&scrollbar=0&view=FitH')">
+            <div class="cert-landscape-frame">
+              <iframe src="https://1drv.ms/b/c/d018a6249b4c1438/IQRPrrhbdBI1R4Us2uu16sSiAVEBWXbpNyIMAiWHTIv0hfM#toolbar=0&navpanes=0&scrollbar=0&view=FitH" frameborder="0" scrolling="no" style="overflow: hidden; pointer-events: none;"></iframe>
+            </div>
+          </div>
+        </div>
+
+        <!-- Award 2: President List Summer -->
+        <div class="cert-item-wrapper">
+          <div class="cert-landscape-container" onclick="openCertModal('iframe', 'https://1drv.ms/b/c/d018a6249b4c1438/IQRhlcfwTMNBRYukN7MRB45FAVC0dH2HvYEdeilyyNcQbLI#toolbar=0&navpanes=0&scrollbar=0&view=FitH')">
+            <div class="cert-landscape-frame">
+              <iframe src="https://1drv.ms/b/c/d018a6249b4c1438/IQRhlcfwTMNBRYukN7MRB45FAVC0dH2HvYEdeilyyNcQbLI#toolbar=0&navpanes=0&scrollbar=0&view=FitH" frameborder="0" scrolling="no" style="overflow: hidden; pointer-events: none;"></iframe>
+
       </div>
     </section>
   </div>
