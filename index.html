@@ -62,7 +62,7 @@
     .nav-container {
       max-width: 1200px;
       margin: 0 auto;
-      padding: 1.2rem 2rem 0.8rem 2rem;
+      padding: 1.2rem 1rem 0.8rem 1rem;
       display: flex;
       justify-content: space-between;
       align-items: flex-end;
@@ -595,7 +595,25 @@
       letter-spacing: 1px;
     }
 
-    @media (max-width: 768px) {
+@media (max-width: 768px) {
+      .hero-content {
+        flex-direction: column-reverse; 
+        gap: 2rem;
+        text-align: center;
+      }
+
+      .hero-text-side {
+        text-align: center;
+      }
+
+      .hero-text-side p {
+        text-align: center;
+      }
+
+      .hero-image-side img {
+        max-width: 600px;
+      }
+
       .cert-grid-custom {
         grid-template-columns: 1fr;
       }
@@ -613,9 +631,12 @@
         gap: 1rem;
         align-items: center;
         padding-bottom: 1rem;
+        text-align: center;
       }
-    }
-  </style>
+      .logo {
+        align-items: center;
+      }
+    }  </style>
   <script id="asp-embed-script" data-zindex="1000000" type="text/javascript" charset="utf-8" src="https://new.express.adobe.com/webpage/static/embed/embed.js" async></script>
 </head>
 <body>
@@ -657,7 +678,7 @@
 
           <h1>Welcome to my Portfolio</h1>
           <p class="subtitle">Where organized structure meets thoughtful support</p>
-          <p>At my core, I enjoy creating order, improving processes, and helping things run smoothly. I care about accuracy, I care about people, and I care about doing things the right way. These values form the foundation of my professional identity and guide how I approach every project and role.</p>
+          <p>At my core, I enjoy creating order, improving processes, and helping things run smoothly. I care about quality, I care about people, and I care about doing things the right way. These values form the foundation of my professional identity and guide how I approach every project and role.</p>
 
           <p style="margin-top: 1px;">My strengths lie in logical thinking, steady leadership, and strong teamwork, which help keep groups organized, remove obstacles, and ensure everyone stays aligned toward a shared goal.</p>
           <p style="margin-top: 1px;">Whether I’m leading a complex task or supporting others, I work with intention, care, and a focus on helping both people and processes succeed.</p>
@@ -677,7 +698,7 @@
       
       <div class="about-grid">
         <div>
-          <p>Over the years, I’ve built a career shaped by curiosity, precision, and a genuine commitment to helping people. I’m someone who thrives in organized, detail‑driven environments where clarity, accuracy, and thoughtful communication make a real difference. This includes reviewing complex documents, coordinating projects, and guiding clients through creative design processes.</p>
+          <p>Over the years, I’ve built a career shaped by curiosity, precision, and a genuine commitment to helping people. I’m someone who thrives in organized, detail‑driven environments where focus, accuracy, and thoughtful communication make a meaningful impact. This includes reviewing complex documents, coordinating projects, and guiding clients through creative design processes.</p>
           <p style="margin-top: 1rem;">My work in AI training has strengthened my ability to analyze information deeply, maintain consistency, and uphold high quality standards. I’m often tasked with choosing between imperfect or ambiguous outputs and analyzing documents through a logical, problem‑solving lens. I take pride in applying careful reasoning and critical thinking to each decision. It’s work that rewards patience, focus, and sound judgement.</p>
 	<p style="margin-top: 1rem;">My long-standing role as a CAD Jewellery Designer taught me how to listen closely, communicate clearly, and manage multiple priorities without losing sight of the details. Maintaining thousands of confidential client records and custom design projects gave me a strong appreciation for organized systems and the trust people place in them.</p>
 	<p style="margin-top: 1rem;">As I conclude my Office Administration – Executive studies at Seneca Polytechnic, I am bringing all of these experiences together. I’m drawn to roles where organization, quality assurance, and client service intersect, and I’m especially interested in education and public‑sector environments where the work supports people and communities. At the same time, I remain open‑minded to exploring other opportunities that allow me to grow, contribute, and apply my skills in meaningful ways.</p>
@@ -789,12 +810,18 @@
             <span class="subheading-tech">Web Design & AI Collaboration</span>
           </div>
           <div class="project-description" style="margin-top: 0; margin-bottom: 1rem;">
-The portfolio you’re exploring right now began as a technical challenge I set for myself: to build a webpage from the ground up while expanding my skill set. I designed and developed this site by leveraging AI tools, specifically Gemini, to bring my creative direction to life. Using a prompting approach known as "vibe coding", I guided Gemini with the aesthetic, tone, and structure I envisioned. From there, I refined the code with AI support, shaping the layout, colours, typography, and embedded files into a clean, personalized space that reflects my work and identity.
+The portfolio you’re exploring right now began as a technical challenge I set for myself: to build a webpage from the ground up at zero cost while expanding my skill set. I designed and developed this site by leveraging AI tools, specifically Gemini, to bring my creative direction to life. Using a prompting approach known as "vibe coding", I guided Gemini with the aesthetic, tone, and structure I envisioned. From there, I refined the code with AI support, shaping the layout, colours, typography, and embedded files into a clean, personalized space that reflects my work and identity.
           </div>
           <p class="project-description" style="margin-top: 0;">
-            This project showcases my ability to collaborate with AI tools, solve and troubleshoot technical challenges, translate ideas into functional design, and fine‑tune technical outputs into a polished final product.
+To publish the site and make it accessible through a custom URL, I used GitHub Pages as my hosting platform. Because the webpage was built from raw code rather than a template, I needed a way to store and serve the files publicly. GitHub provided the version control, file management, and static hosting required to display the site online at no cost. By uploading my project to a public repository and configuring GitHub Pages, I was able to connect my custom domain and ensure the site loads reliably for anyone who visits.
           </p>
         </div>
+          <p class="project-description" style="margin-top: 0;">
+This project became a unique learning experience that pushed me to expand my technical abilities and adapt to new tools and workflows. It challenged me to think creatively, troubleshoot unfamiliar problems, and translate ideas into functional design. In the process, I strengthened my ability to collaborate with AI tools, refine technical outputs, and shape a polished final product that reflects both my skills and my curiosity.
+          </p>
+        </div>
+
+
 
         <!-- Project 2: Case Study: Simulated Sales Presentation -->
         <div class="embed-card">
